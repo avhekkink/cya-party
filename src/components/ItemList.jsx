@@ -1,26 +1,28 @@
+import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import React from "react";
-import monitorImg from "../images/raffle/monitor.jpeg";
 
 const ItemList = () => {
-  const allImages = import.meta.glob("../images/raffle/*.jpeg");
+  const allImages = import.meta.glob("/src/images/raffle/*.jpeg");
+  const imagesToRender = Object.keys(allImages).map((img) => img);
+  const re = /\/([^\/]+)\.jpeg$/;
 
-  const imagesToRender = [];
-  for (const img in allImages) {
-    allImages[img]().then((smth) => {
-      imagesToRender.push(img);
-    });
-  }
-
-  console.log("imagesToRender: ", imagesToRender);
-  return (
-    <div className="container">
-      <img src={monitorImg} alt="Monitor" />
-      {/* DEBUG FROM HERE */}
-      {imagesToRender.map((src) => (
-        <img src={src} />
-      ))}
-    </div>
-  );
+  let itemsBody = imagesToRender.map((item, i) => {
+    const titleLowercase = item.match(re)[1].split("-").join(" ");
+    const title =
+      titleLowercase.charAt(0).toUpperCase() + titleLowercase.slice(1);
+    return (
+      // TO DO: Use (woven) image list from MUI instead of these cards
+      <Card key={i} className="card" sx={{ maxWidth: 225 }}>
+        <CardActionArea>
+          <CardMedia component="img" image={item} />
+          <CardContent>
+            <p className="location">{title}</p>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    );
+  });
+  return <div className="image-container">{itemsBody}</div>;
 };
 
 export default ItemList;
