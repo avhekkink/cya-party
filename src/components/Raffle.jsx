@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import ItemList from "./ItemList";
 
 const Raffle = () => {
   const heading = "Raffle O'Clock!";
@@ -9,6 +9,7 @@ const Raffle = () => {
     "Later, I'll draw winning tickets from a hat. If your number gets called, you can pick a prize from the table.";
   const disclaimer =
     "** For bigger items there will be a printed version on the table, and you'll get the bonus of seeing me again when picking up from Bridge Avenue ❤";
+
   return (
     <div className="container">
       <h2 className="heading">{heading}</h2>
@@ -16,6 +17,7 @@ const Raffle = () => {
         <p>{messageP1}</p>
         <p>{messageP2}</p>
         <div className="container">INSERT RAFFLE PRIZES HERE</div>
+        <ItemList />
         <br />
         <p>
           <i>{disclaimer}</i>
