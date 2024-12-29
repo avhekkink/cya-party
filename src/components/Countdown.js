@@ -1,5 +1,4 @@
 import React from "react";
-import "./Countdown.css";
 
 const Countdown = () => {
   const partyDate = new Date("01/11/2025");
