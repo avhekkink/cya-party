@@ -8,7 +8,11 @@ import mapView from "../images/map-view.png";
 const MapCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea
+        href="https://maps.app.goo.gl/QrwdpbRWqMTKMxfa7"
+        target="_blank"
+        rel="noopener"
+      >
         <CardMedia
           component="img"
           height="140"

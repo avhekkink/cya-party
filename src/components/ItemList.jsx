@@ -1,5 +1,5 @@
-import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import React from "react";
+import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
 const ItemList = () => {
   const allImages = import.meta.glob("/src/images/raffle/*.jpeg");
@@ -10,19 +10,26 @@ const ItemList = () => {
     const titleLowercase = item.match(re)[1].split("-").join(" ");
     const title =
       titleLowercase.charAt(0).toUpperCase() + titleLowercase.slice(1);
+
     return (
-      // TO DO: Use (woven) image list from MUI instead of these cards
-      <Card key={i} className="card" sx={{ maxWidth: 225 }}>
-        <CardActionArea>
-          <CardMedia component="img" image={item} />
-          <CardContent>
-            <p className="location">{title}</p>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+      <ImageListItem key={i}>
+        <img
+          srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
+          src={`${item}?w=248&fit=crop&auto=format`}
+          alt={title}
+          loading="lazy"
+        />
+        <ImageListItemBar title={title} />
+      </ImageListItem>
     );
   });
-  return <div className="image-container">{itemsBody}</div>;
+  return (
+    <div className="image-container">
+      <ImageList variant="masonry" cols={2} gap={8}>
+        {itemsBody}
+      </ImageList>
+    </div>
+  );
 };
 
 export default ItemList;
