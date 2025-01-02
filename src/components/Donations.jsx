@@ -8,15 +8,18 @@ const Donations = () => {
     "I don't expect anything, but if you would like to donate to the bar tab to express your gratitude, I'll allow it.";
   const messageP3 = "(Might sneak you a few extra tickets if you do too)";
   const messageP4 =
-    "* all proceeds will be going directly behind the bar against my deposit for the pub!";
+    "** all proceeds will be going directly behind the bar against my deposit for the pub!";
   return (
     <div className="container">
       <h2 className="heading">Donations</h2>
-      <div className="container">
+      <div className="container text-block">
         <p>{messageP1}</p>
         <p>{messageP2}</p>
         <p>{messageP3}</p>
-        <img src={"src/images/Shut-Up-And-Take-My-Money-Fry.jpg"} />
+        <img
+          src={"src/images/Shut-Up-And-Take-My-Money-Fry.jpg"}
+          width="100%"
+        />
         <Button
           variant="outlined"
           size="large"
@@ -28,7 +31,7 @@ const Donations = () => {
         >
           Shut up and take my money
         </Button>
-        <p>
+        <p className="text-block">
           <i>{messageP4}</i>
         </p>
       </div>
