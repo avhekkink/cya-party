@@ -2,7 +2,7 @@ import React from "react";
 import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
 const ItemList = () => {
-  const allImages = import.meta.glob("/public/images/raffle/*.jpeg");
+  const allImages = import.meta.glob("../images/raffle/*.jpeg");
   const imagesToRender = Object.keys(allImages).map((img) => img);
   const re = /\/([^\/]+)\.jpeg$/;
 

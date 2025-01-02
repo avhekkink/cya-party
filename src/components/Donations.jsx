@@ -16,10 +16,7 @@ const Donations = () => {
         <p>{messageP1}</p>
         <p>{messageP2}</p>
         <p>{messageP3}</p>
-        <img
-          src={"public/images/Shut-Up-And-Take-My-Money-Fry.jpg"}
-          width="100%"
-        />
+        <img src={"../images/Shut-Up-And-Take-My-Money-Fry.jpg"} width="100%" />
         <Button
           variant="outlined"
           size="large"
