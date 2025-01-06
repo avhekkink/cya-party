@@ -18,6 +18,7 @@ const ItemList = () => {
           src={`${item}?w=248&fit=crop&auto=format`}
           alt={title}
           loading="lazy"
+          className="image"
         />
         <ImageListItemBar title={title} />
       </ImageListItem>
@@ -25,7 +26,7 @@ const ItemList = () => {
   });
   return (
     <div className="image-container">
-      <ImageList variant="masonry" cols={2} gap={8}>
+      <ImageList variant="woven" cols={2} gap={8}>
         {itemsBody}
       </ImageList>
     </div>

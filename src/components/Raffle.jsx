@@ -8,9 +8,10 @@ const Raffle = () => {
     "Everyone will receive a raffle ticket on arrival - lucky you!";
   const messageP2 = "Later on, I'll draw winning tickets from a hat.";
   const messageP3 =
-    "If your number is called, you get to pick any prize from the table* 🎉";
+    "If your number is called, you get to pick any prize* from the table 🎉";
   const disclaimer =
-    "* for bigger items there will be a printed version on the table, and you'll get the bonus of seeing me again when picking up from Bridge Avenue ❤";
+    "* for bigger items there'll be a printed version on the table instead";
+  const disclaimerPt2 = "(BONUS: you get to see me again to collect ❤)";
 
   return (
     <div className="container">
@@ -27,6 +28,8 @@ const Raffle = () => {
       <br />
       <p>
         <i>{disclaimer}</i>
+        <br />
+        <i>{disclaimerPt2}</i>
       </p>
     </div>
   );

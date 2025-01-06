@@ -5,7 +5,7 @@ const Donations = () => {
   const messageP1 =
     "Rather than selling these items on Vinted or Facebook Marketplace, I've decided to gift them to my nearest and dearest in the raffle instead.";
   const messageP2 =
-    "I don't expect anything, but if you would like to donate to the bar tab to express your gratitude, I'll allow it.";
+    "I don't expect anything, but if you\'d like to donate to the bar tab to express your gratitude, I'll allow it.";
   const messageP3 = "(Might sneak you a few extra tickets if you do too)";
   const messageP4 =
     "** all proceeds will be going directly behind the bar against my deposit for the pub!";
