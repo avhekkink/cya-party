@@ -23,6 +23,8 @@ const Raffle = () => {
         <p className="text-block">{messageP1}</p>
         <p className="text-block">{messageP2}</p>
         <p className="text-block">{messageP3}</p>
+        <br />
+        SCROLL TO SEE MORE ⬇
       </div>
       <ItemList />
       <br />

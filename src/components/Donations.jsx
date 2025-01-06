@@ -28,7 +28,7 @@ const Donations = () => {
         >
           Shut up and take my money
         </Button>
-        <p className="text-block">
+        <p className="text-block bottom-of-page">
           <i>{messageP4}</i>
         </p>
       </div>

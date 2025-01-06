@@ -16,7 +16,7 @@ const CountdownTimer = () => {
   }, [timeRemaining]);
 
   const formatTime = (time) => {
-    if (time <= 0) {
+    if (time < 0) {
       return <header className="countdown-message">CYA BYEEEEEE 🥳</header>;
     } else {
       const seconds = Math.floor((time / 1000) % 60);
@@ -49,7 +49,8 @@ const CountdownTimer = () => {
 
   return (
     <div className="countdown-timer-container">
-      <>{formatTime(timeRemaining)}</>
+      <h3 className="subheading">Party countdown:</h3>
+      <>{timeRemaining ? formatTime(timeRemaining) : "calculating..."}</>
     </div>
   );
 };
